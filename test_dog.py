@@ -14,11 +14,11 @@ class Dog_image_response(BaseModel):
 
 url = "https://dog.ceo/api/breeds"
 
-def test_list_breed():
+def test_list_breed_200():
     response = requests.get(f"{url}/list/all")
     assert response.status_code == 200
 
-def test_image():
+def test_image_check_structure():
     response = requests.get(f"{url}/image/random")
 
     data = response.json()
